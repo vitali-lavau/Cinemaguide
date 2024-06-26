@@ -1,45 +1,101 @@
-# project
+# Cinema App
 
-This template should help get you started developing with Vue 3 in Vite.
+![Cinema App Logo](src/assets/images/logo.svg)
 
-## Recommended IDE Setup
+## Overview
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Cinema App is a web application designed to provide users with information about movies. Users can view details about different movies, explore various genres, and manage their favorite movies. The application is built with Vue.js and TypeScript, ensuring a scalable and maintainable codebase.
 
-## Type Support for `.vue` Imports in TS
+## Table of Contents
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- [Features](#features)
+- [Technologies](#technologies)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
-## Customize configuration
+## Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **Movie Listings**: Browse through a vast collection of movies.
+- **Genre Exploration**: Discover movies based on genres.
+- **Favorite Movies**: Save and manage your favorite movies.
+- **User Authentication**: Secure login and registration.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-## Project Setup
+## Technologies
 
-```sh
-npm install
+- **Frontend**: Vue.js, TypeScript
+- **State Management**: Pinia
+- **Build Tool**: Vite
+- **Linting**: ESLint
+- **Formatting**: Prettier
+- **Testing**: Vitest
+
+## Project Structure
+
+```plaintext
+.
+├── public/                 # Public assets
+│   └── favicon.ico         # Favicon
+├── src/                    # Source files
+│   ├── api/                # API modules
+│   ├── assets/             # Assets (styles, fonts, images)
+│   ├── components/         # Vue components
+│   ├── router/             # Vue Router configuration
+│   ├── stores/             # Pinia stores
+│   ├── types/              # TypeScript types
+│   ├── utils/              # Utility functions
+│   ├── views/              # Vue views (pages)
+│   ├── App.vue             # Main App component
+│   ├── main.ts             # Application entry point
+│   └── shims-vue.d.ts      # Vue shims for TypeScript
+├── .eslintrc.cjs           # ESLint configuration
+├── .gitignore              # Git ignore file
+├── .prettierrc.json        # Prettier configuration
+├── env.d.ts                # Environment type declarations
+├── index.html              # Main HTML file
+├── package.json            # Package configuration
+├── package-lock.json       # Package lock file
+├── README.md               # Project documentation
+├── tsconfig*.json          # TypeScript configuration
+├── vite.config.ts          # Vite configuration
+└── vitest.config.ts        # Vitest configuration
 ```
 
-### Compile and Hot-Reload for Development
+## Installation
 
-```sh
-npm run dev
-```
+To get started with the Cinema App, follow these steps:
 
-### Type-Check, Compile and Minify for Production
+1. **Clone the repository**:
 
-```sh
-npm run build
-```
+    ```bash
+    git clone https://github.com/yourusername/cinema-app.git
+    cd cinema-app
+    ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+2. **Install dependencies**:
 
-```sh
-npm run test:unit
-```
+    ```bash
+    npm install
+    ```
 
-### Lint with [ESLint](https://eslint.org/)
+3. **Run the development server**:
 
-```sh
-npm run lint
-```
+    ```bash
+    npm run dev
+    ```
+
+4. **Build for production**:
+
+    ```bash
+    npm run build
+    ```
+
+## Usage
+
+After installing the dependencies and starting the development server, you can access the application at `http://localhost:5174` (or a different port if specified in the terminal output). Explore the various features like browsing movies, managing favorites, and more.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
