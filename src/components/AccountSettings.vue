@@ -6,7 +6,7 @@
             </div>
 
             <div class="settings__item-inner">
-                <div class="settings__item-info">Имя Фамилия</div>
+                <div class="settings__item-info">Name</div>
                 <div class="settings__item-title">{{ authStore.user?.name + ' ' + authStore.user?.surname }}</div>
             </div>
         </div>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="settings__item-inner">
-                <div class="settings__item-info">Электронная почта</div>
+                <div class="settings__item-info">Email</div>
                 <div class="settings__item-title">{{ authStore.user?.email }}</div>
             </div>
         </div>
@@ -30,7 +30,7 @@
             @click="handleLogout"
             class="btn settings__btn"
         >
-            Выйти из аккаунта
+            Log out
         </button>
     </div>
 </template>
@@ -51,10 +51,10 @@ const handleLogout = async () => {
     isLoading.value = true;
     try {
         await authStore.logoutUser();
-        toast.success('Успешный выход из системы!');
+        toast.success('Successful logout!');
         await router.push('/');
     } catch (error) {
-        toast.error('Ошибка при выходе из системы: ' + (error as Error).message);
+        toast.error('Error when logging out of the system: ' + (error as Error).message);
     } finally {
         isLoading.value = false;
     }

@@ -21,7 +21,7 @@
                 @click="loadMore"
                 class="btn movies__btn"
             >
-                Показать ещё
+                Show more
             </button>
         </div>
     </div>

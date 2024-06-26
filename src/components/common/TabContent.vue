@@ -22,7 +22,5 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-.tab-content {
 
-}
 </style>

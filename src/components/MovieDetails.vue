@@ -1,42 +1,42 @@
 <template>
     <div v-if="movie" class="details">
         <div class="container">
-            <h2 class="details__title">О фильме</h2>
+            <h2 class="details__title">About the movie</h2>
 
             <ul class="details__list">
                 <li v-if="movie.language" class="details__list-item">
                     <div class="title">
-                        <span>Язык оригинала</span>
+                        <span>Original language</span>
                     </div>
                     <div class="desc">{{ getLanguageName(movie.language) }}</div>
                 </li>
                 <li v-if="movie.budget" class="details__list-item">
                     <div class="title">
-                        <span>Бюджет</span>
+                        <span>Budget</span>
                     </div>
                     <div class="desc">{{ formatCurrency(movie.budget) }}</div>
                 </li>
                 <li v-if="movie.revenue" class="details__list-item">
                     <div class="title">
-                        <span>Выручка</span>
+                        <span>Revenue</span>
                     </div>
                     <div class="desc">{{ formatCurrency(movie.revenue) }}</div>
                 </li>
                 <li v-if="movie.director" class="details__list-item">
                     <div class="title">
-                        <span>Режиссёр</span>
+                        <span>Director</span>
                     </div>
                     <div class="desc">{{ movie.director }}</div>
                 </li>
                 <li v-if="movie.production" class="details__list-item">
                     <div class="title">
-                        <span>Продакшн</span>
+                        <span>Production</span>
                     </div>
                     <div class="desc">{{ movie.production }}</div>
                 </li>
                 <li v-if="movie.awardsSummary" class="details__list-item">
                     <div class="title">
-                        <span>Награды</span>
+                        <span>Awards</span>
                     </div>
                     <div class="desc">{{ movie.awardsSummary }}</div>
                 </li>

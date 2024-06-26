@@ -2,9 +2,9 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
-                <div class="footer__desc">LLC «Мультимедиа Визион»</div>
+                <div class="footer__desc">LLC «Multimedia Vision»</div>
                 <div class="footer__copyright">
-                    Все права защищены
+                    All rights reserved
                 </div>
 
                 <SocialLinks />

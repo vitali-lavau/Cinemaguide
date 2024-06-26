@@ -1,7 +1,7 @@
 <template>
     <div class="genres">
         <div class="container">
-            <h1 class="genres__title">Жанры фильмов</h1>
+            <h1 class="genres__title">Film genres</h1>
 
             <div class="genres__list">
                 <router-link

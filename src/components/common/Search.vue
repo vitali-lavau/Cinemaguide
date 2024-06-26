@@ -3,7 +3,7 @@
         <input
             class="search__input"
             type="text"
-            placeholder="Поиск"
+            placeholder="Search"
             v-model="query"
             @input="searchMovies"
         />

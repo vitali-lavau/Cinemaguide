@@ -1,7 +1,7 @@
 <template>
     <div class="top-movies">
         <div class="container">
-            <h2 class="top-movies__title">Топ 10 фильмов</h2>
+            <h2 class="top-movies__title">Top 10 films</h2>
 
             <div class="top-movies__list">
                 <router-link v-for="(movie, index) in top10Movies" :key="movie.id" :to="`/movie/${movie.id}`" class="top-movies__item">

@@ -10,7 +10,7 @@
                     v-model="query"
                     @input="searchMovies"
                     type="text"
-                    placeholder="Поиск"
+                    placeholder="Search"
                     class="mobile-search__input"
                 >
 

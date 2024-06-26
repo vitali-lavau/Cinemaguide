@@ -14,8 +14,8 @@
                     <p class="hero__desc">{{ movie.plot }}</p>
 
                     <div class="hero__actions" :class="{ page: moviePage }">
-                        <button @click="showTrailer = true" class="btn">Трейлер</button>
-                        <router-link v-if="linkMovie" :to="`/movie/${movie.id}`" class="btn btn--black">О фильме
+                        <button @click="showTrailer = true" class="btn">Trailer</button>
+                        <router-link v-if="linkMovie" :to="`/movie/${movie.id}`" class="btn btn--black">About
                         </router-link>
                         <button
                             @click="handleFavorite"

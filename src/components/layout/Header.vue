@@ -12,8 +12,8 @@
                     v-if="screenWidth >= 1024"
                     class="nav"
                 >
-                    <router-link to="/" exact>Главная</router-link>
-                    <router-link to="/genres">Жанры</router-link>
+                    <router-link to="/" exact>Main</router-link>
+                    <router-link to="/genres">Genres</router-link>
                 </nav>
 
                 <Search v-if="screenWidth >= 1024" />
@@ -26,7 +26,7 @@
                         v-if="!authStore.isAuthenticated"
                         @click="showAuthModal = true"
                     >
-                        Вход
+                        Sign in
                     </button>
                     <router-link v-else :to="'/account'">{{ authStore.user?.name }}</router-link>
                 </div>

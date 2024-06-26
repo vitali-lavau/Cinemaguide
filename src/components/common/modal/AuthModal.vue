@@ -12,29 +12,29 @@
                     type="email"
                     name="email"
                     v-model="loginEmail"
-                    placeholder="Электронная почта"
+                    placeholder="Email"
                 >
                 <input
                     class="auth__form-input"
                     type="password"
                     name="password"
                     v-model="loginPassword"
-                    placeholder="Пароль"
+                    placeholder="Password"
                 >
-                <button class="btn auth__btn" type="submit">Войти</button>
+                <button class="btn auth__btn" type="submit">Sign in</button>
             </form>
 
-            <button class="btn btn--text auth__btn" @click="toggleForm">Регистрация</button>
+            <button class="btn btn--text auth__btn" @click="toggleForm">Sign up</button>
         </div>
 
         <template v-else-if="registrationSuccess">
-            <h4 class="auth__title">Регистрация завершена</h4>
-            <p class="auth__desc">Используйте вашу электронную почту для входа</p>
-            <button class="btn auth__btn" @click="toggleForm">Войти</button>
+            <h4 class="auth__title">Registration is complete</h4>
+            <p class="auth__desc">Use your email to log in</p>
+            <button class="btn auth__btn" @click="toggleForm">Sign in</button>
         </template>
 
         <div v-else>
-            <h4 class="auth__form-title">Регистрация</h4>
+            <h4 class="auth__form-title">Sign up</h4>
             <form
                 @submit.prevent="handleRegister"
                 class="auth__form"
@@ -46,7 +46,7 @@
                     type="email"
                     name="email"
                     v-model="registerEmail"
-                    placeholder="Электронная почта"
+                    placeholder="Email"
                 >
                 <input
                     :class="{ 'error': registerNameError }"
@@ -54,7 +54,7 @@
                     type="text"
                     name="firstName"
                     v-model="registerName"
-                    placeholder="Имя"
+                    placeholder="Name"
                 >
                 <input
                     :class="{ 'error': registerSurnameError }"
@@ -62,7 +62,7 @@
                     type="text"
                     name="lastName"
                     v-model="registerSurname"
-                    placeholder="Фамилия"
+                    placeholder="Surname"
                 >
                 <input
                     :class="{ 'error': registerPasswordError }"
@@ -70,7 +70,7 @@
                     type="password"
                     name="password"
                     v-model="registerPassword"
-                    placeholder="Пароль"
+                    placeholder="Password"
                 >
                 <input
                     :class="{ 'error': registerConfirmPasswordError }"
@@ -78,11 +78,11 @@
                     type="password"
                     name="confirmPassword"
                     v-model="registerConfirmPassword"
-                    placeholder="Подтвердите пароль"
+                    placeholder="Confirm password"
                 >
-                <button type="submit" class="btn auth__btn">Создать аккаунт</button>
+                <button type="submit" class="btn auth__btn">Create account</button>
             </form>
-            <button @click="toggleForm" class="btn btn--text auth__btn">У меня есть аккаунт</button>
+            <button @click="toggleForm" class="btn btn--text auth__btn">I have an account</button>
         </div>
     </div>
 </template>
@@ -134,12 +134,12 @@ const handleLogin = async () => {
     };
     try {
         const result = await authStore.loginUser(userData);
-        toast.success('Успешный вход в систему!');
+        toast.success('Successful login!');
         if (result.result) {
             handleClose();
         }
     } catch (error) {
-        toast.error('Ошибка при входе: ' + (error as Error).message);
+        toast.error('Login error: ' + (error as Error).message);
     }
 };
 
@@ -151,7 +151,7 @@ const handleRegister = async () => {
     registerConfirmPasswordError.value = !registerConfirmPassword.value || (registerPassword.value !== registerConfirmPassword.value);
 
     if (registerEmailError.value || registerNameError.value || registerSurnameError.value || registerPasswordError.value || registerConfirmPasswordError.value) {
-        toast.error('Пожалуйста, заполните все поля корректно.');
+        toast.error('Please fill in all fields correctly.');
         return;
     }
 
@@ -164,11 +164,11 @@ const handleRegister = async () => {
     try {
         const result = await register(userData);
         if (result.success) {
-            toast.success('Регистрация завершена! Используйте вашу электронную почту для входа.');
+            toast.success('Registration is complete! Use your email to log in.');
             registrationSuccess.value = true;
         }
     } catch (error) {
-        toast.error('Ошибка при регистрации: ' + (error as Error).message);
+        toast.error('Registration error: ' + (error as Error).message);
     }
 };
 

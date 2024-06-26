@@ -1,7 +1,7 @@
 <template>
     <div class="account">
         <div class="container">
-            <h1 class="account__title">Мой аккаунт</h1>
+            <h1 class="account__title">My account</h1>
             <Tabs :tabs="tabs" v-model:activeTab="activeTab"/>
             <TabContent :activeTab="activeTab">
                 <div v-if="activeTab === 'tab1'">
@@ -28,12 +28,12 @@ import AccountSettings from "@/components/AccountSettings.vue";
 const originalTabs: Tab[] = [
     {
         key: 'tab1',
-        label: 'Избранные фильмы',
+        label: 'Favorite Films',
         icon: '/src/assets/images/icons/icon-favorite.svg'
     },
     {
         key: 'tab2',
-        label: 'Настройка аккаунта',
+        label: 'Account settings',
         icon: '/src/assets/images/icons/icon-user.svg'
     },
 ];
@@ -47,9 +47,9 @@ watch(screenWidth, (newWidth) => {
     if (newWidth < 1024) {
         tabs.value = originalTabs.map(tab => {
             if (tab.key === 'tab1') {
-                return { ...tab, label: 'Избранное' };
+                return { ...tab, label: 'Favorites' };
             } else if (tab.key === 'tab2') {
-                return { ...tab, label: 'Настройки' };
+                return { ...tab, label: 'Settings' };
             }
             return tab;
         });
