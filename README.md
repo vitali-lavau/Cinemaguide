@@ -26,6 +26,7 @@ Cinema App is a web application designed to provide users with information about
 ## Technologies
 
 - **Frontend**: Vue.js, TypeScript
+- **HTTP Client**: Axios
 - **State Management**: Pinia
 - **Build Tool**: Vite
 - **Linting**: ESLint
